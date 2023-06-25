@@ -1,0 +1,164 @@
+\documentclass[14pt]{beamer}
+\usepackage{Estilos/BeamerUVM}
+\usepackage{Estilos/ColoresLatex}
+\input{Preambulos/preambulo_Beamer_Madrid_default}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+
+\sisetup{per-mode=symbol}
+\DeclareSIUnit\atm{atm}
+\resetcounteronoverlays{saveenumi}
+
+\title{\Large{Conversión de Unidades de Presión} \\ \normalsize{Física 2}}
+\date{14 de junio de 2023}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+
+\section{Conversión de unidades}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Base principal}
+
+\begin{frame}
+\frametitle{La conversión de unidades}
+En física es muy común realizar cambios de unidades para alguna magnitud tanto en el mismo sistema de medición, como en otros sistemas.
+\\
+\bigskip
+\pause
+La conversión de unidades es un procedimiento sencillo que se realiza de manera sencilla.
+\end{frame}
+\begin{frame}
+\frametitle{Los factores de conversión}
+El \textocolor{cobalt}{primer paso} es: \pause contar con el (los) factor(es) de conversión, de esta manera reducimos el trabajo y nos anticipamos favorablemente para resolver el ejercicio.
+\end{frame}
+\begin{frame}
+\frametitle{Factores directos e intermedios}
+En algunos ejercicios será posible hacer la conversión ocupando un solo factor de conversión, \pause a esta conversión le llamaremos \textocolor{red}{conversión directa}.
+\\
+\bigskip
+\pause
+Por ejemplo, convertir de kilómetros a metros.
+\end{frame}
+\begin{frame}
+\frametitle{Factores directos e intermedios}
+En el caso de que se requiera de otros factores de conversión adicionales, le llamaremos \textocolor{magenta}{conversión intermedia}.
+\\
+\bigskip
+\pause
+Deberán de ocuparse los factores de conversión necesarios para llegar a las unidades que se solicitaron.
+\end{frame}
+\begin{frame}
+\frametitle{Siguiente paso}
+El \textocolor{brickred}{segundo paso} consiste en multplicar la cantidad incial a convertir por cada uno de los factores de conversión.
+\\
+\bigskip
+\pause
+Revisa con cuidado la manera en que presentas el factor de conversión, ya que debes de garantizar que las unidades iniciales se \enquote{cancelen}.
+\end{frame}
+\begin{frame}
+\frametitle{Cancelando las unidades}
+Convertir \SI{64}{\kilo\meter\per\hour} a \unit{\meter\per\second}
+\\
+\bigskip
+\pause
+Anotamos previamente los factores de conversión:
+\begin{align*}
+\SI{1}{\kilo\meter} &= \SI{1000}{\meter} \\[0.5em]
+1 \, \, \text{hora} &= \SI{60}{\minute} \times \SI{60}{\second} = \SI{3600}{\second}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Convirtiendo las unidades}
+Presentamos la conversión:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\SI[per-mode=fraction]{64}{\kilo\meter\per\hour} \times \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \times \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} =
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Convirtiendo las unidades}
+Presentamos la conversión:
+\begin{eqnarray*}
+\begin{aligned}
+&64 \, \dfrac{\Cancel[red]{\text{km}}}{\Cancel[red]{\text{h}}} \times \dfrac{\SI{1000}{\meter}}{\SI{1}{\Cancel[red]{\kilo\meter}}} \times \dfrac{\SI{1}{\Cancel[red]{\hour}}}{\SI{3600}{\second}} = \dfrac{\SI{6.41d4}{\meter}}{\SI{3.6d3}{\second}} = \\[0.5em] \pause
+&= \left( \dfrac{6.41}{3.6} \right) \times 10^{4-3} = \pause \SI[per-mode=fraction]{17.8}{\meter\per\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
+
+\section{Unidades de Presión}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Ejercicios de conversión}
+
+\begin{frame}
+\frametitle{Ejercicio de conversión}
+Realiza la conversión de \SI{1}{\atm} a dinas/\unit{\square\centi\meter}
+\\
+\bigskip
+\pause
+Para identificar los factores de conversión, hay que recordar varias definiciones.
+\end{frame}
+\begin{frame}
+\frametitle{Definiciones previas}
+Recordemos que:
+\begin{eqnarray*}
+\begin{aligned}
+\SI{1}{atm} &= \SI{1.01325d5}{\pascal} \\[0.5em] \pause
+\SI{1}{\pascal} &= \SI[per-mode=fraction]{1}{\newton\per\square\meter} \\[0.5em] \pause
+\SI{1}{\newton} &= \SI[per-mode=fraction]{1}{\kilo\gram\meter\per\square\second} \\[0.5em] \pause
+1 \,\, \text{dina} &= \SI[per-mode=fraction]{1}{\gram\centi\meter\per\square\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{La conversión a realizar}
+Entonces lo que nos piden para la conversión es:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\num{1.01325d5} \dfrac{\displaystyle \unit[per-mode=fraction]{\kilo\gram\meter\per\square\second}}{\unit{\square\meter}} \quad \rightarrow \quad \dfrac{\displaystyle \unit[per-mode=fraction]{\gram\centi\meter\per\square\second}}{\unit{\square\centi\meter}}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Los factores de conversión}
+Vamos a ocupar los siguientes factores de conversión:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\SI{1}{\kilo\gram} &= \SI{d3}{\gram} \\[0.5em] \pause
+\SI{1}{\meter} &= \SI{d2}{\centi\meter} \\[0.5em] \pause
+\left( \SI{1}{\meter} \right)^{2} &= \left( \SI{d2}{\centi\meter} \right)^{2} \\[0.5em] \pause
+\SI{1}{\square\meter} &= \SI{d4}{\square\centi\meter}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Ajustando la expresión}
+Para simplificar la operación, hagamos el siguiente ajuste:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\num{1.01325d5} \dfrac{\displaystyle \unit[per-mode=fraction]{\kilo\gram\meter\per\square\second}}{\unit{\square\meter}} = \num{1.01325d5} \, \, \dfrac{\unit{\kilo\gram\meter}}{\unit{\square\second} \unit{\square\meter}}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Usando los factores de conversión}
+\begin{eqnarray*}
+\begin{aligned}
+&\num{1.01325d5} \, \, \dfrac{\unit{\kilo\gram\meter}}{\unit{\square\second} \unit{\square\meter}} \left( \dfrac{\SI{d3}{\gram}}{\SI{1}{\kilo\gram}} \right) \left( \dfrac{\SI{d2}{\centi\meter}}{\SI{1}{\meter}} \right) \left( \dfrac{\SI{1}{\square\meter}}{\SI{d4}{\square\centi\meter}} \right) = \\[0.5em] \pause
+&= \dfrac{\SI{1.01325d10}{\gram\centi\meter}}{\num{d4} \, \, \unit{\square\second} \unit{\square{\centi\meter}}} =
+\end{aligned}
+\end{eqnarray*}
+
+\end{frame}
+
+\end{document}

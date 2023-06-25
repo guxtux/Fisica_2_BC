@@ -1,0 +1,75 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=fraction]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{makecell}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicios de conversión de unidades de presión \\ Física 2\vspace{-5ex}}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item Convertir $1$ atm a lb/in$^{2}$.
+
+Lo que sabemos es que $1$ atm = \SI{101.325}{\kilo\pascal}, que en notación cientíica resulta: $1$ atm = \SI{1.01325d5}{\pascal}, además conocemos la relación que hay entre el Pascal y los Newtons:
+\begin{align*}
+\SI{1}{\pascal} = \SI{1}{\newton\per\square\meter} 
+\end{align*}
+
+Vemos que será necesario determinar el factor de conversión de libras (fuerza) a Newtons, es decir:
+\begin{align*}
+\text{lb (fuerza)} \, \rightarrow \unit{\newton}
+\end{align*}
+
+De la definición de libra (fuerza), sabemos que:
+\begin{align*}
+1 \text{libra (fuerza)} = 1 \, \dfrac{\text{ slug \, pie}^{2}}{\unit{\square\second}}
+\end{align*}
+donde el slug es la unidad de masa en el sistema inglés (revisa las notas), consultando una tabla de unidades, más las que vimos en clase:
+\begin{align*}
+1 \, \text{slug} &= 32.17 \text{lb (masa)} \\[0.5em]
+1 \, \text{lb} &= \SI{0.4535}{\kilo\gram} \\[0.5em]
+1 \, \text{pie} &= \SI{0.3048}{\meter}
+\end{align*}
+Con esta información ya podremos hacer la conversión:
+\begin{align*}
+\left( 32.17 \dfrac{\text{ slug \, pie}^{2}}{\unit{\square\second}} \right) \left(  \dfrac{\SI{0.4535}{\kilo\gram}}{1 \, \text{lb}} \right) \left( \dfrac{\SI{0.3048}{\meter}}{1 \, \text{pie}} \right) = \SI{4.446}{\newton}
+\end{align*}
+El factor de conversión de libra (fuerza) a Newtons es: $1$ lb = \SI{4.446}{\newton}, para la longitud sabemos que el factor de conversión es: $1$ in = \SI{0.0254}{\meter}, de donde podemos obtener el factor entre pulgadas al cuadrado y metros al cuadrado: 
+\begin{align*}
+\left( 1 \, \text{in} \right) &= \left(\SI{0.0254}{\meter} \right) \\[0.5em]
+\left( 1 \, \text{in} \right)^{2} &= \left( \SI{0.0254}{\meter} \right)^{2} \\[0.5em]
+1 \, \text{in}^{2} &= \SI{6.451d-4}{\square\meter}
+\end{align*}
+Ahora ocupamos los factores de conversión:
+\begin{align*}
+\left( \SI{1.01325d5}{\newton\per\square\meter} \right) \left( \dfrac{1 \, \text{lb}}{\SI{4.446}{\newton}} \right) \left( \dfrac{\SI{6.451d-4}{\square\meter}}{1 \, \text{in}^{2}} \right) = 14.70 \, \dfrac{\text{lb}}{\text{in}^{2}}
+\end{align*}
+
+Los siguientes ejercicios tendrían que haberse resuelto de la misma manera.
+\item Convertir $1$ atm a di/cm$^{2}$.
+\item Convertir $1$ di/cm$^{2}$ a mmHg.
+\item Convertir $1$ di/cm$^{2}$ a mmHg.
+\item lb/in$^{2}$ a {$\displaystyle \unit{\newton\per\square\meter}$}
+\item lb/in$^{2}$ a atm
+\item 1 mmHg a lb/in$^{2}$
+\end{enumerate}
+
+\end{document}
