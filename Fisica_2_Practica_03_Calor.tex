@@ -1,0 +1,179 @@
+\documentclass[14pt]{beamer}
+\usepackage{./Estilos/BeamerUVM}
+\usepackage{./Estilos/ColoresLatex}
+\input{Preambulos/preambulo_Beamer_Cambridge_default}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+\DeclareSIUnit\erg{erg}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+\sisetup{per-mode=symbol}
+\resetcounteronoverlays{saveenumi}
+
+\title{\Large{Práctica 3 - Calor y temperatura} \\ \normalsize{Física 2}}
+\date{4 de julio de 2023}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{La Práctica}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Objetivo}
+
+\begin{frame}
+\frametitle{Objetivo de la Práctica}
+Determinar la curva de ascenso y descenso de temperatura de dos líquidos.
+\end{frame}
+\begin{frame}
+\frametitle{Hipótesis}
+Planteamos como hipótesis:
+\\
+\pause
+La sustancia combinada con otras sustancias, tiene una curva de ascenso de temperatura más prolongada que la de una sustancia pura.
+\end{frame}
+
+\subsection{Material}
+
+\begin{frame}
+\frametitle{Material y equipo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Parrilla eléctrica.
+\item 2 vasos de precipitado.
+\item 2 termómetros.
+\item 2 rejillas de asbesto.
+\item Cronómetro (del celular)
+\item Agua.
+\item Sal.
+\end{enumerate}
+\end{frame}
+
+\subsection{Procedimiento}
+
+\begin{frame}
+\frametitle{Iniciando la práctica}
+\setbeamercolor{item projected}{bg=red,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Registra la temperatura ambiente.
+\item Coloca \SI{100}{\milli\liter} de agua cada vaso de precipitado.
+\item Al segundo vaso, agrega sal hasta tener una solución sobresaturada.
+\item Coloca el primer vaso en la parrilla.
+\item Enciende la parrilla y deja la perilla en la posición $4$.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Registrando los valores}
+\setbeamercolor{item projected}{bg=red,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Registra en tu cuaderno el tiempo (en segundos) y el valor de temperatura (grados centígrados) \textocolor{carmine}{CADA 15 SEGUNDOS}.
+\item Una vez que haya comenzado a ebullir el agua, retira con cuidado el vaso y colócalo en la rejilla de asbesto.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Registrando los valores}
+\setbeamercolor{item projected}{bg=red,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Ahora deberás de registrar el tiempo y la temperatura de descenso \textocolor{cobalt}{CADA 15 SEGUNDOS}.
+\item Repite el mismo procedimiento para el vaso con la solución salina sobresaturada.
+\end{enumerate}
+\end{frame}
+
+\subsection{Análisis de los datos}
+
+\begin{frame}
+\frametitle{Análisis de los datos 1/2}
+Deberás de graficar en un mismo espacio las dos curvas de ascenso de temperatura, diferenciando ya sea con un color o una marca.
+\\
+\bigskip
+\pause
+No unas los puntos experimentales, solo deben de estar las marcas de tiempo y temperatura.
+\end{frame}
+\begin{frame}
+\frametitle{Graficando los datos experimentales}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw [-stealth] (0, 0) -- (5, 0) node [above, pos=1] {$t \, [\unit{\second}]$};
+        \draw [-stealth] (0, 0) -- (0, 5) node [left, pos=1] {$T \, [\unit{\degreeCelsius}]$};
+    \end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Análisis de los datos 2/2}
+Ahora grafica en un mismo espacio las dos curvas de descenso de temperatura, diferenciando ya sea con un color o una marca.
+\\
+\bigskip
+\pause
+No unas los puntos experimentales, solo deben de estar las marcas de tiempo y temperatura.
+\end{frame}
+\begin{frame}
+\frametitle{Interpretación 1/2}
+Responde las siguientes preguntas:
+\pause
+\setbeamercolor{item projected}{bg=black,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item En el ascenso de temperatura ¿qué sustancia es la que muestra la curva más prolongada?
+\item ¿Cómo explicas esto?
+\item ¿El punto de ebullición es el mismo en ambas sustancias?
+\item Deberás de apoyarte con una revisión en libros, NO SE ACEPTAN enunciados de AI.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Interpretación 1/2}
+Responde las siguientes preguntas:
+\pause
+\setbeamercolor{item projected}{bg=black,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item En el descenso de temperatura ¿qué sustancia es la que muestra la curva más \enquote{rápida}?
+\item ¿Cómo explicas esto?
+\item ¿La temperatura ambiente tiene que ver con estos resultados?
+\item Deberás de apoyarte con una revisión en libros, NO SE ACEPTAN enunciados de AI.
+\end{enumerate}
+\end{frame}
+
+\subsection{El reporte}
+
+\begin{frame}
+\frametitle{Envío del reporte}
+Una vez que concluyas la interpretación y explicaciones señaladas, señalar si se cumplió el objetivo de la práctica y si la hipótesis inicial fue correcta, \pause deberás de enviar tu reporte INDIVIDUAL en la asignación de Teams.
+\end{frame}
+\begin{frame}
+\frametitle{Fecha de entrega}
+Recuerda incluir tu nombre y la autoevaluación que se indica en el Manual de Prácticas.
+\\
+\bigskip
+\pause
+Tu informe deberá de enviarse a más tardar el lunes 10 de julio a las 8 pm.
+\end{frame}
+\end{document}

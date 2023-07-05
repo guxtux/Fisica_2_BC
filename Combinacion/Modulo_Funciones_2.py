@@ -365,3 +365,190 @@ def elaboraCartaConcentrado(Estudiante, Webinar, Personajes, Densidades, Convers
     
     #Salvamos el PDF.
     objetoCanvas.save()
+    
+#---------------------------
+
+def elaboraCartaConcentradoSemanal(Semana, Estudiante, Webinar, Faltas_Teo, Faltas_Lab, Previo_Lab):
+
+    ruta = 'Evaluacion_Continua/Parcial_02'
+    nombre_archivo = Estudiante.strip() + '_Concentrado_Semana_0' + Semana + '.pdf'
+    outfilepath = os.path.join( ruta, nombre_archivo )
+    objetoCanvas = Canvas(outfilepath, pagesize=letter)
+    
+    objetoCanvas.drawString(275, 700, 'Ciudad de México a 2 de julio de 2023.')
+    
+    #Estilo de la hoja.
+    
+    styles=getSampleStyleSheet()
+    
+    story1= []
+    
+    ptextoencabezado = Estudiante + '. <br/>'
+    
+    styles.add(ParagraphStyle(name='Izquierda', alignment=TA_LEFT, fontSize = 14, leading = 20))
+    story1.append(Paragraph(ptextoencabezado, styles['Izquierda']))
+    
+    frame = Frame(50, 650, 6.5*inch, 0.5*inch, showBoundary=0)
+    frame.addFromList(story1, objetoCanvas)
+    
+    story2 = []
+    
+    ptextomensaje = 'A continuación se te presenta la relación de asistentes, actividades de Evaluación Continua, y del trabajo de Laboratorio, para la semana ' + Semana  + '.'
+    
+    if Semana == '7':
+        fecha_semana = '<br/><br/>Del 26 al 30 de junio de 2023.'
+    
+    ptextomensaje = ptextomensaje + fecha_semana
+    
+        
+    styles.add(ParagraphStyle(name='Justificado', alignment=TA_JUSTIFY, fontSize = 12, leading = 18))
+    story2.append(Paragraph(ptextomensaje, styles['Justificado']))
+
+    #Definimos otro frame.
+    frame2 = Frame(50, 510, 6.5*inch, 2*inch, showBoundary=1)
+    frame2.addFromList(story2, objetoCanvas)
+
+    # story3 = []
+
+    # colWidths=(1.6*inch, 0.6*inch, 1.5*inch, 1.25*inch,)
+
+    # t1 = Table([ ['Actividad', 'Puntos', 'Fecha asignación', 'Fecha entrega'],
+    #             ['Webinar', '1', '17 de mayo', '17 de mayo'],
+    #             ['Personajes Fluidos', '3', '21 de mayo', '28 de mayo'],
+    #             ['Densidades', '1', '23 de mayo', '28 de mayo'],
+    #             ['Unidades Presión', '1', '29 de mayo', '4 de junio'],
+    #             ['Medio Ambiente', '1', '7 de junio', '7 de junio'],
+    #             ['Ejercicios Pascal', '2', '7 de junio', '11 de junio']
+    #             ],
+    #             colWidths, rowHeights=25)
+    # t1.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+    #                         ('FONTSIZE', (0, 0), (-1, -1), 12),
+    #                         ('GRID', (0, 0), (-1, -1), 1, colors.black),
+    #                         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE')
+    #                         ]))
+    
+    # story3.append(t1)
+
+    # #Definimos otro frame.
+    # frame3 = Frame(50, 320, 6.5*inch, 2.75*inch, showBoundary=0)
+    # frame3.addFromList(story3, objetoCanvas)
+
+    # story4 = []
+    
+    # ptextomensaje = 'El total de puntos a obtener en las actividades es de 9. La suma de tu puntaje se divide entre 9. <br/><br/>Lo que enviaste:<br/>'
+
+    # story4.append(Paragraph(ptextomensaje, styles['Justificado']))
+
+    # columnas1 = (0.8*inch, 1*inch, 0.6*inch, 1*inch, 1*inch, 1*inch, 0.8*inch)
+    # t2 = Table([ ['Webinar', 'Personajes', 'Dens.', 'U. Presión', 'Medio Amb.', 'Ejer. Pascal', 'Puntos'],
+    #             [Webinar, Personajes, Densidades, Conversion, M_Amb, Ejer_Pascal, Puntos]
+    #             ],
+    #             columnas1, rowHeights=20)
+
+    # t2.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+    #                         ('FONTSIZE', (0, 0), (-1, 1), 12),
+    #                         ('GRID', (0, 0), (-1, -1), 1, colors.black),
+    #                         ('VALIGN', (1, 1), (-1, -1), 'MIDDLE')
+    #                         ])) 
+
+    # story4.append(t2)
+
+    # textopuntaje = '<br/><b>Calificación de Evaluación Continua: ' + Eval_Continua +'</b>'
+
+    # story4.append(Paragraph(textopuntaje, styles['Justificado']))
+    # # story4.append(PageBreak())
+
+    # # Definimos otro frame.
+    # frame3 = Frame(50, 160, 6.5*inch, 2.3*inch, showBoundary=0)
+    # frame3.addFromList(story4, objetoCanvas)
+
+    # objetoCanvas.showPage()
+
+    # story5 = []
+    
+    # ptextolaboratorio = '<b>Laboratorio.</b><br/>Se consideran las dos prácticas realizadas, se presenta el puntaje a obtener en la práctica, así como las fechas de asignación y entrega por grupo:<br/><br/>'
+    
+    # story5.append(Paragraph(ptextolaboratorio, styles['Justificado']))
+
+    # colWidths=(0.6*inch, 1*inch, 0.6*inch, 1.45*inch, 1.25*inch,)
+
+    # t3 = Table([ ['Grupo', 'Práctica', 'Puntos', 'Fecha asignación', 'Fecha entrega'],
+    #              ['41B', 'Práctica 1', '10', '25 de mayo', '31 de mayo'],
+    #              ['41C', 'Práctica 1', '10', '26 de mayo', '1 de junio'],
+    #              ['41B', 'Práctica 2', '10', '1 de junio', '7 de junio'],
+    #              ['41C', 'Práctica 2', '10', '2 de junio', '8 de junio']
+    #              ],
+    #              colWidths, rowHeights=25)
+    # t3.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+    #                         ('FONTSIZE', (0, 0), (-1, -1), 12),
+    #                         ('GRID', (0, 0), (-1, -1), 1, colors.black),
+    #                         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE')
+    #                         ]))
+    
+    # story5.append(t3)
+
+    # # #Definimos otro frame.
+    # frame4 = Frame(50, 500, 6.5*inch, 3.1*inch, showBoundary=0)
+    # frame4.addFromList(story5, objetoCanvas)
+
+    # story6 = []
+    
+    # ptextomensaje2 = 'En tu registro se tiene lo siguiente:<br/>'
+
+    # story6.append(Paragraph(ptextomensaje2, styles['Justificado']))
+
+    # t4 = Table([ ['Práctica 1', 'Práctica 2', 'Promedio'],
+    #             [Practica_1, Practica_2, Laboratorio]
+    #             ],
+    #             colWidths=70, rowHeights=20)
+
+    # t4.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+    #                         ('FONTSIZE', (0, 0), (-1, 1), 12),
+    #                         ('GRID', (0, 0), (-1, -1), 1, colors.black),
+    #                         ('VALIGN', (1, 1), (-1, -1), 'MIDDLE')
+    #                         ])) 
+
+    # story6.append(t4)
+
+    # textopuntaje2 = '<br/><b>Calificación de Laboratorio: ' + Laboratorio +'</b>'
+
+    # story6.append(Paragraph(textopuntaje2, styles['Justificado']))
+
+    # #Definimos otro frame.
+    # frame5 = Frame(50, 400, 6.5*inch, 1.5*inch, showBoundary=0)
+    # frame5.addFromList(story6, objetoCanvas)
+
+    # story7 = []
+
+    # ptextocalificaciones = "<br/></b</>La calificación del PRIMER EXAMEN PARCIAL se obtiene, primero al multiplicar cada elemento por el correspondiente peso, luego se suman los puntajes, el resultado es tu calificación del primer examen parcial, solo queda pendiente anotar tu calificación del examen.<br/><br/>"
+
+    # story7.append(Paragraph(ptextocalificaciones, styles['Justificado']))
+
+    # columnas = (1.75*inch, 1.2*inch, 1*inch, 1*inch)
+    # t5 = Table([['Elemento', 'Calificación', 'Peso', 'Puntaje'],
+    #             ['Evaluación continua', Eval_Continua, "35%", float(Eval_Continua)*0.5],
+    #             ['Examen', '', '35%', ''],
+    #             ['Laboratorio', Laboratorio, '30%', round(float(Laboratorio)*0.3, 2)]                
+    #             ],
+    #             columnas, rowHeights=25)
+    # t5.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+    #                         ('FONTSIZE', (0, 0), (-1, -1), 12),
+    #                         ('GRID', (0, 0), (-1, -1), 1, colors.black),
+    #                         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE')
+    #                         ]))
+    
+    # story7.append(t5)
+
+    # ptextomensajefinal= '<br/><br/>Atentamente,<br/>M. en C. Ramón Gustavo Contreras Mayén.<br/>Profesor del curso de Física 2.'
+
+    
+    # story7.append(Paragraph(ptextomensajefinal, styles['Justificado']))
+
+    # #Definimos otro frame.
+    # frame6 = Frame(50, 100, 6.5*inch, 4.35*inch, showBoundary=0)
+    # frame6.addFromList(story7, objetoCanvas)
+
+    objetoCanvas.showPage()
+    
+    #Salvamos el PDF.
+    objetoCanvas.save()
