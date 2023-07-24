@@ -60,7 +60,7 @@ Si alguien decide no enviar los ejercicios adicionales, no tendrá penalización
 \end{frame}
 
 \section{Introducción}
-\frame{\tableofcontents[currentsection, hideothersubsections]}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
 \subsection{La experiencia diaria}
 
 \begin{frame}
@@ -292,7 +292,7 @@ Temperatura ambiente en la ciudad de Puebla & & & & $18$ \\ \hline
 \end{frame}
 
 \section{El Calor}
-\frame{\tableofcontents[currentsection, hideothersubsections]}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
 \subsection{Definición de calor}
 
 \begin{frame}
@@ -371,7 +371,7 @@ Deberás de incluir las correspondientes operaciones.
 \end{frame}
 
 \section{Transferencia de calor}
-\frame{\tableofcontents[currentsection, hideothersubsections]}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
 \subsection{Tipos de transferencia}
 
 \begin{frame}
@@ -627,7 +627,7 @@ L_{f} &= L_{i} \bigg[ 1 + \alpha \, \left( T_{f} - T_{i} \right) \bigg]
 \textocolor{red}{Sustitución:}
 \begin{eqnarray*}
 \begin{aligned}
-L_{f} &= \SI{5}{\meter} \bigg[ 1 + \num{11.7d-6} \unit{\degreeCelsius}^{-1} \, \left( \SI{25}{\degreeCelsius} - \SI{15}{\degreeCelsius} \right) \bigg] = \\[0.5em] \pause
+L_{f} &= \SI{5}{\meter} \bigg[ 1 + \num{11.7d-6} \, \unit{\degreeCelsius}^{-1} \, \left( \SI{25}{\degreeCelsius} - \SI{15}{\degreeCelsius} \right) \bigg] = \\[0.5em] \pause
 L_{f} &= \SI{5.000585}{\meter}
 \end{aligned}
 \end{eqnarray*}
@@ -643,5 +643,385 @@ L_{f} - L_{i} &= \SI{5.000585}{\meter} - \SI{5}{\meter} = \\[0.5em] \pause
 \end{aligned}
 \end{eqnarray*}
 \end{frame}
-    
+
+\section{Capacidad calorífica}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Definición}
+
+\begin{frame}
+\frametitle{Definición de capacidad calorífica}
+La \textocolor{red}{capacidad calorífica} $(C)$ es la cantidad de energía calorífica necesaria para elevar un grado Celsius la temperatura de una sustancia.
+\end{frame}
+\begin{frame}
+\frametitle{Expresión}
+Matemáticamente se expresa como:
+\pause
+\begin{align*}
+C = \dfrac{Q}{\Delta T} \hspace*{1.5cm} \left[ \dfrac{\unit{\joule}}{\unit{\kelvin}} \right]
+\end{align*}
+Donde:
+\setbeamercolor{item projected}{bg=red,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item $C$ es la capacidad calorífica.
+\item $Q$ es el calor.
+\item $\Delta T$ es el cambio en la temperatura.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio}
+Una pulsera de plata requiere \SI{100}{\cal} para aumentar su temperatura de \SI{20}{\degreeCelsius} a \SI{75}{\degreeCelsius}
+\\
+\bigskip
+\pause
+¿Cuál es su capacidad calorífica?
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:}
+\begin{align*}
+T_{i} &= \SI{20}{\degreeCelsius} \\[0.4em]
+T_{f} &= \SI{75}{\degreeCelsius} \\[0.4em]
+Q &= \SI{100}{\cal} \\[0.4em]
+C &= \, ?
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresión:}
+\begin{align*}
+C = \dfrac{Q}{\Delta T} = \dfrac{Q}{T_{f} - T_{i}}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\begin{eqnarray*}
+\begin{aligned}
+C &= \dfrac{\SI{100}{\cal}}{T_{f} - T_{i}} = \pause \dfrac{\SI{100}{\cal}}{\SI{75}{\degreeCelsius} - \SI{20}{\degreeCelsius}} = \pause \dfrac{\SI{100}{\cal}}{\SI{55}{\degreeCelsius}} = \\[0.5em] \pause
+C &= \SI{1.818}{\cal\per\degreeCelsius}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
+\section{Calor específico}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Definición}
+
+\begin{frame}
+\frametitle{El concepto de calor específico}
+Si calentamos una sustancia, \textocolor{cobalt}{la capacidad calorífica no cambia} cuando se tiene \textocolor{byzantine}{la misma masa}, \pause pero si la masa de dicha sustancia varía, la cantidad de calor absorbido será diferente
+\end{frame}
+\begin{frame}
+\frametitle{El concepto de calor específico}
+Es decir, \textbf{la cantidad de masa determina la cantidad de calor requerida para variar su temperatura}.
+\\
+\bigskip
+\pause
+A esta cantidad se le llama \textocolor{cerise}{calor especifico}.
+\end{frame}
+\begin{frame}
+\frametitle{Definiendo el calor específico}
+El \textocolor{americanrose}{calor específico} es la cantidad de calor necesaria para elevar la temperatura de una unidad de masa de una sustancia en un grado Celsius (\SI{1}{\degreeCelsius}).
+\end{frame}
+\begin{frame}
+\frametitle{Relación entre cantidades}
+El calor específico se relaciona con la capacidad calorífica de la siguiente forma:
+\pause
+\begin{align*}
+C_{e} = \dfrac{C}{m}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Relación entre cantidades}
+Sustituyendo la expresión de la capacidad calorífica escribimos el calor específico en función del calor como:
+\pause
+\begin{align*}
+C_{e} = \dfrac{Q}{m \, \Delta T}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Valor de la capacidad calorífica}
+Para cada sustancia la \textocolor{burgundy}{capacidad calorífica es única}, \pause por lo que la ecuación anterior nos permite determinar el calor en función del calor específico:
+\pause
+\begin{align*}
+Q = m \, C_{e} \, \Delta T
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Valor de la capacidad calorífica}
+También se pueden utilizar otras unidades como son:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\unit[per-mode=fraction]{\joule\per\kilo\gram\per\degreeCelsius} \\[0.5em] \pause
+\unit[per-mode=fraction]{\cal\per\gram\per\degreeCelsius}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Algunos valores de capacidad calorífica}
+\begin{table}
+    \centering
+    \renewcommand{\arraystretch}{1}
+    \begin{tabular}{c | c | c}
+        Sustancia & $C_{e}$ \unit{\cal\per\gram\per\degreeCelsius} & $C_{e}$ \unit{\joule\per\kilo\gram\per\degreeCelsius} \\ \hline
+        Agua & $1.00$ & $4200$ \\ \hline
+        Hielo & $0.50$ & $2100$ \\ \hline
+        Hierro & $0.113$ & $475$ \\ \hline
+        Aluminio & $0.217$ & $911$ \\ \hline
+        Plata & $0.056$ & $235$ \\ \hline        
+    \end{tabular}
+
+\end{table}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio}
+¿Cuánto calor se requiere para aumentar la temperatura, de \SI{20}{\degreeCelsius} a \SI{75}{\degreeCelsius}, a \SI{2}{\kilo\gram} de hierro?
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:}
+\begin{align*}
+T_{i} &= \SI{20}{\degreeCelsius} \\[0.4em]
+T_{f} &= \SI{75}{\degreeCelsius} \\[0.4em]
+m &= \SI{2}{\kilogram} \\[0.4em]
+C_{e} &= \SI[per-mode=fraction]{0.113}{\cal\per\gram\per\degreeCelsius}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresión:}
+\begin{eqnarray*}
+\begin{aligned}
+Q &= m \, C_{e} \, \Delta T = \\[0.5em] \pause
+Q &= (\SI{2000}{\gram}) \left( \SI[per-mode=fraction]{0.113}{\cal\per\gram\per\degreeCelsius} \right) (\SI{75}{\degreeCelsius} - \SI{20}{\degreeCelsius}) = \\[0.5em] \pause
+Q &= \SI{12430}{\cal}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+Quinientos gramos de hierro se encuentran a una temperatura de \SI{20}{\degreeCelsius}.
+\\
+\bigskip
+\pause
+¿Cuál será su temperatura final si se le suministran \SI{8000}{\cal}?
+\end{frame}
+\begin{frame}
+\frametitle{Solución al ejercicio}
+\textocolor{red}{Datos:}
+\pause
+\begin{align*}
+m &= \SI{500}{\gram} \\[0.3em]
+T_{i} &= \SI{20}{\degreeCelsius} \\[0.3em]
+T_{f} &= \, ? \\[0.3em]
+Q &= \SI{8000}{\cal} \\[0.3em]
+C_{e_{Fe}} &= \SI{0.113}{\cal\per\gram\per\degreeCelsius}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresión:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+Q &= m \, C_{e} (T_{f} - T_{i}) \\[0.5em] \pause
+T_{f} - T_{i} &= \dfrac{Q}{m \, C_{e}} \\[0.5em] \pause
+T_{f} &= \dfrac{Q}{m \, C_{e}} + T_{i}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+T_{f} &= \dfrac{\SI{8000}{\cal}}{(\SI{500}{\gram})\left( \SI{0.113}{\cal\per\gram\per\degreeCelsius} \right)} = \\[0.5em] \pause
+T_{f} &= \SI{141.59}{\degreeCelsius} + \SI{20}{\degreeCelsius} = \\[0.5em] \pause
+T_{f} &= \SI{161.59}{\degreeCelsius}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+¿Qué cantidad de calor se debe aplicar a una barra de plata de \SI{15}{\kilo\gram} para que eleve su temperatura de \SI{22}{\degreeCelsius} a \SI{90}{\degreeCelsius}?
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+Este ejercicio cuenta como actividad en clase, así que hay que resolverlo para que tengan una firma que cuenta como $1$ punto de Evaluación Continua.
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:}
+\pause
+\begin{align*}
+m &= \SI{15}{\kilo\gram} = \SI{15000}{\gram} \\[0.3em]
+T_{i} &= \SI{22}{\degreeCelsius} \\[0.3em]
+T_{f} &= \SI{90}{\degreeCelsius} \\[0.3em]
+Q &= \, ? \\[0.3em]
+C_{e_{Ag}} &= \SI{0.056}{\cal\per\gram\per\degreeCelsius}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresión:}
+\pause
+\begin{align*}
+Q = m \, C_{e} (T_{f} - T_{i})
+\end{align*}
+\textocolor{red}{Sustitución:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+Q &= \left( \SI{15000}{\gram} \right) \left( \SI[per-mode=fraction]{0.056}{\cal\per\gram\per\degreeCelsius} \right) \left( \SI{90}{\degreeCelsius} - \SI{22}{\degreeCelsius} \right) = \\[0.5em] \pause
+Q &= \SI{57120}{\cal} 
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
+\section{Cambios de fases}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Estados de la materia}
+
+\begin{frame}
+\frametitle{Estados de agregación}
+La materia, como podemos observar en nuestro entorno, se encuentra en tres estados
+característicos, que son: sólido, líquido y gaseoso. 
+\end{frame}
+\begin{frame}
+\frametitle{Estados de agregación}
+Al cambiar la energía en el entorno, los elementos y los compuestos pueden cambiar del estado de agregación en el que se encuentran a otro.
+\\
+\bigskip
+\pause
+Este cambio se denomina \textocolor{cobalt}{cambio de fase}.
+\end{frame}
+\begin{frame}
+\frametitle{La energía en los cambios de fase}
+Los cambios de fases se realizan suministrando o extrayendo energía, \pause acción que consiste  en separar o juntar las moléculas de la sustancia que va a cambiar de fase.
+\end{frame}
+
+\subsection{Calor latente}
+
+\begin{frame}
+\frametitle{Definición}
+La cantidad de calor que se necesita para que se produzca un cambio de fase por
+unidad de masa se conoce como \textocolor{red}{calor latente}, y se representa con la letra $L$.
+\end{frame}
+\begin{frame}
+\frametitle{El calor latente}
+El calor latente es la relación entre la cantidad de calor que se absorbe o se
+libera y la masa del material que experimenta el cambio de fase.
+\\
+\bigskip
+\pause
+Se expresa por:
+\begin{align*}
+L = \dfrac{Q}{m}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Cambios de fase}
+Si dejamos una gelatina al sol, luego de cierto tiempo se hace líquida.
+\\
+\bigskip
+\pause
+Cuando una sustancia experimenta un cambio de fase sólido al líquido, el calor se denomina \textocolor{darkgreen}{calor latente de fusión}.
+\end{frame}
+\begin{frame}
+\frametitle{Cambios de fase}
+Por el contrario, cuando el cambio es de líquido a vapor, se llama \textocolor{ao}{calor latente de vaporización}
+\end{frame}
+
+\section{Sobre el examen}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Plan de recuperación}
+
+\begin{frame}
+\frametitle{Seguimento puntual}
+Se ha iniciado un seguimiento puntual de las entregas de actividades de evaluación continua y de reportes de prácticas.
+\end{frame}
+\begin{frame}
+\frametitle{Inasistencias}
+Se informará de manera individual el número de inasistencias en la clase de Física 2 en conjunto con la clase de Laboratorio.
+\\
+\bigskip
+\pause
+A menos que se tenga una validación por parte de la Coordinación Académica, se modificará en el acta.
+\end{frame}
+\begin{frame}
+\frametitle{Actividades pendientes}
+A partir de hoy se recibirán actividades pendientes de enviar, \pause se calificarán \textocolor{red}{sobre 7 (siete)}, esto les dará un puntaje que es conveniente tener para sumar puntos.
+\end{frame}
+\begin{frame}
+\frametitle{Plazo de entrega}
+Se recibirán las actividades tanto de Evaluación Continua como reportes de Laboratorio, a más tardar el sábado 15 de julio de 2023 a las 8 pm.
+\end{frame}
+\begin{frame}
+\frametitle{Plazo de entrega}
+El envío se hará por mensaje directo en Teams al Profesor. Quienes tengan un seguimiento puntual, deberán enviar por el chat con la Coordinadora y Orientadora.
+\end{frame}
+\begin{frame}
+\frametitle{De los reportes de prácticas pendientes}
+Quien no haya asistido a una clase de Laboratorio, como tal, aparte de la inasistencia, no se le recibirá el trabajo que haya hecho el equipo el día de clase.
+\end{frame}
+\begin{frame}
+\frametitle{Recuperación de Laboratorio}
+Para obtener un puntaje en Laboratorio, se pide que quienes no tengan envío del reporte de las prácticas, \pause deberán de elaborar lo siguiente:
+\end{frame}
+\begin{frame}
+\frametitle{Recuperación Práctica 3}
+En el caso de la Práctica 3 Teorema de Bernoulli y Torricelli, \pause deberán de resolver el ejercicio de la Presa de la Angostura, para presentar en una tabla, la velocidad, el tiempo que tarda en caer y el alcance del chorro de agua en cada tubería de descarga.
+\end{frame}
+\begin{frame}
+\frametitle{Recuperación Práctica 4}
+En el caso de la Práctica 4 Medición de la temperatura, \pause deberán de resolver por escrito el siguiente ejercicio: Una vez preparado el café, se sirve en una taza, sabemos por la experiencia que debemos de esperar a que la bebida se enfríe para tomarla.
+\end{frame}
+\begin{frame}
+\frametitle{Recuperación Práctica 4}
+Explica en términos de calor y temperatura por qué luego de un tiempo, la temperatura del café ya no cambia tanto como al inicio.
+\end{frame}
+\begin{frame}
+\frametitle{Recuperación Práctica 5}
+En el caso de la Práctica 5 Fenómenos termodinámicos, \pause elabora por escrito un mapa mental sobre fenómenos termodinámicos cotidianos: en la vida diaria, en la cocina, en la escuela, etc.
+\end{frame}
+\begin{frame}]
+\frametitle{Puntaje de recuperación}
+Cada actividad de Laboratorio, se calificará \textocolor{ao}{sobre 7 (siete)}.
+\end{frame}
+
+\subsection{Retroalimentación}
+
+\begin{frame}
+\frametitle{Sesiones de Retroalimentación}
+Se manejará como en la evaluación anterior, luego del examen se tendrá una sesión en donde se presentará la calificación del segundo examen parcial, así como de sus componentes.
+\end{frame}
+\begin{frame}
+\frametitle{Inconformidades}
+En caso de que manifiesten una inconformidad en su calificación, se les pide que presenten sus evidencias y argumentos para que en un plazo de 24 horas, quede resuelta su petición.
+\end{frame}
+\begin{frame}
+\frametitle{Actividad opcional de Evaluación Continua}
+Previo a la semana de exámenes, se te pide elabores \textocolor{darkblue}{por escrito} una guía con los temas, conceptos y expresiones que se presentaron del 26 de julio a la clase de hoy.
+\end{frame}
+\begin{frame}
+\frametitle{Actividad opcional de Evaluación Continua}
+Se abrirá una asignación para recibir el trabajo.
+\\
+\bigskip
+\pause
+El plazo vence el domingo 16 de julio a las 8 pm. \textocolor{burgundy}{Te otorgará un punto opcional}.
+\end{frame}
+\begin{frame}
+\frametitle{Como dice la mercadotecnia}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{Imagenes/Julio_Regalado.png}
+\end{figure}
+\end{frame}
 \end{document}

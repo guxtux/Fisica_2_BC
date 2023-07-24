@@ -1,0 +1,97 @@
+\documentclass[14pt]{beamer}
+\usepackage{./Estilos/BeamerUVM}
+\usepackage{./Estilos/ColoresLatex}
+\input{Preambulos/preambulo_Beamer_Cambridge_wolverine}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+\DeclareSIUnit\erg{erg}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+\sisetup{per-mode=symbol}
+\resetcounteronoverlays{saveenumi}
+
+\title{\Large{Electricidad y Magnetismo} \\ \normalsize{Física 2}}
+\date{24 de julio de 2023}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame[allowframebreaks]{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{Electricidad}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Introducción}
+
+\begin{frame}
+\frametitle{Preguntas disparadoras}
+¿Te has imaginado vivir en un mundo sin energía eléctrica?
+\\
+\bigskip
+\pause
+Esto implicaría no usar aparatos electrónicos como radio, televisión, grabadora y otros más.
+\end{frame}
+\begin{frame}
+\frametitle{Nooooo!}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.1]{Imagenes/emoji_sorpresa.jpg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Aprovechamiento de la electricidad}
+Por lo tanto, \pause contar con un tipo de fuente de energía, empleando una propiedad física, \pause nos facilita y mejora nuestra calidad de vida, porque sin ella, no contaríamos con iluminación
+y calor.
+\end{frame}
+\begin{frame}
+\frametitle{Aprovechamiento de la electricidad}
+Esto significa que con esta fuente de energía se ponen en marcha diferentes tipos de máquinas, artefactos y sistemas de transporte, por mencionar algunos.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la electricidad?}
+La palabra electricidad se deriva de la raíz griega elektron, que significa ámbar.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la electricidad?}
+La electricidad se define como un fenómeno físico que se origina del \textocolor{flame}{movimiento de partículas subatómicas por medio de cargas eléctricas} a través de la atracción y repulsión de las mismas.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la electricidad?}
+la Electricidad es una rama de la Física que estudia todos los fenómenos relacionados con las cargas eléctricas en reposo o movimiento.
+\end{frame}
+\begin{frame}
+\frametitle{Electrostática}
+Rama de la electricidad que se encarga de estudiar las \textocolor{folly}{cargas eléctricas en reposo}.
+\end{frame}
+\begin{frame}
+\frametitle{Electrodinámica}
+Es la rama de la electricidad que se encarga de estudiar las \textocolor{halayaube}{cargas eléctricas en movimiento}.
+\end{frame}
+\begin{frame}
+\frametitle{Propiedad fundamental}
+La \textocolor{hanpurple}{carga eléctrica} es una propiedad fundamental de la materia y base de todos los fenómenos de interacción eléctrica.
+\\
+\bigskip
+\pause
+Se representa con la letra $q$.
+\end{frame}
+\begin{frame}
+\frametitle{Tipos de carga eléctrica}
+Las cargas eléctricas son de dos tipos:
+\pause
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \node at (0, 0) {Tipos de carga};
+        \draw node at (4.75, 1) {Carga positiva};
+        \draw [-stealth] (2, 0) -- (3, 1);
+        \draw [fill, color=ao, text=white] (7.5, 1) circle (10pt) node {$+$};
+
+        \draw node at (4.75, -1) {Carga negativa};
+        \draw [-stealth] (2, 0) -- (3, -1);
+        \draw [fill, color=red, text=white] (7.5, -1) circle (10pt) node {$-$};
+        
+    \end{tikzpicture}
+\end{figure}
+\end{frame}
+\end{document}

@@ -405,53 +405,52 @@ def elaboraCartaConcentradoSemanal(Semana, Estudiante, Webinar, Faltas_Teo, Falt
     story2.append(Paragraph(ptextomensaje, styles['Justificado']))
 
     #Definimos otro frame.
-    frame2 = Frame(50, 510, 6.5*inch, 2*inch, showBoundary=1)
+    frame2 = Frame(50, 510, 6.5*inch, 1.3*inch, showBoundary=1)
     frame2.addFromList(story2, objetoCanvas)
 
-    # story3 = []
+    story3 = []
 
-    # colWidths=(1.6*inch, 0.6*inch, 1.5*inch, 1.25*inch,)
+    ptextoasistencia = "Inasistencias en clases de Teoría y de Laboratorio<br/><br/>"
 
-    # t1 = Table([ ['Actividad', 'Puntos', 'Fecha asignación', 'Fecha entrega'],
-    #             ['Webinar', '1', '17 de mayo', '17 de mayo'],
-    #             ['Personajes Fluidos', '3', '21 de mayo', '28 de mayo'],
-    #             ['Densidades', '1', '23 de mayo', '28 de mayo'],
-    #             ['Unidades Presión', '1', '29 de mayo', '4 de junio'],
-    #             ['Medio Ambiente', '1', '7 de junio', '7 de junio'],
-    #             ['Ejercicios Pascal', '2', '7 de junio', '11 de junio']
-    #             ],
-    #             colWidths, rowHeights=25)
-    # t1.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-    #                         ('FONTSIZE', (0, 0), (-1, -1), 12),
-    #                         ('GRID', (0, 0), (-1, -1), 1, colors.black),
-    #                         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE')
-    #                         ]))
+    story3.append(Paragraph(ptextoasistencia, styles['Justificado']))
+
+    colWidths=(1*inch, 1.3*inch)
+
+    t1 = Table([ ['Teoría', 'Laboratorio'],
+                [Faltas_Teo, Faltas_Lab]],
+                colWidths, rowHeights=25)
+
+    t1.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                            ('FONTSIZE', (0, 0), (-1, -1), 12),
+                            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE')
+                            ]))
     
-    # story3.append(t1)
+    story3.append(t1)
 
     # #Definimos otro frame.
-    # frame3 = Frame(50, 320, 6.5*inch, 2.75*inch, showBoundary=0)
-    # frame3.addFromList(story3, objetoCanvas)
+    frame3 = Frame(50, 420, 6.5*inch, 1.5*inch, showBoundary=1)
+    frame3.addFromList(story3, objetoCanvas)
 
-    # story4 = []
+    story4 = []
     
-    # ptextomensaje = 'El total de puntos a obtener en las actividades es de 9. La suma de tu puntaje se divide entre 9. <br/><br/>Lo que enviaste:<br/>'
+    ptextoactividades = 'Se indican las actividades que enviaste en la semana ' + Semana + '.<br/><br/>'
 
-    # story4.append(Paragraph(ptextomensaje, styles['Justificado']))
+    story4.append(Paragraph(ptextoactividades, styles['Justificado']))
 
-    # columnas1 = (0.8*inch, 1*inch, 0.6*inch, 1*inch, 1*inch, 1*inch, 0.8*inch)
-    # t2 = Table([ ['Webinar', 'Personajes', 'Dens.', 'U. Presión', 'Medio Amb.', 'Ejer. Pascal', 'Puntos'],
-    #             [Webinar, Personajes, Densidades, Conversion, M_Amb, Ejer_Pascal, Puntos]
-    #             ],
-    #             columnas1, rowHeights=20)
+    columnas1 = (1*inch, 1.7*inch)
+    t2 = Table([ ['Webinar', 'Previo Práctica Lab.'],
+                [Webinar, Previo_Lab]
+                ],
+                columnas1, rowHeights=20)
 
-    # t2.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-    #                         ('FONTSIZE', (0, 0), (-1, 1), 12),
-    #                         ('GRID', (0, 0), (-1, -1), 1, colors.black),
-    #                         ('VALIGN', (1, 1), (-1, -1), 'MIDDLE')
-    #                         ])) 
+    t2.setStyle(TableStyle([('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                            ('FONTSIZE', (0, 0), (-1, 1), 12),
+                            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                            ('VALIGN', (1, 1), (-1, -1), 'MIDDLE')
+                            ])) 
 
-    # story4.append(t2)
+    story4.append(t2)
 
     # textopuntaje = '<br/><b>Calificación de Evaluación Continua: ' + Eval_Continua +'</b>'
 
@@ -459,8 +458,8 @@ def elaboraCartaConcentradoSemanal(Semana, Estudiante, Webinar, Faltas_Teo, Falt
     # # story4.append(PageBreak())
 
     # # Definimos otro frame.
-    # frame3 = Frame(50, 160, 6.5*inch, 2.3*inch, showBoundary=0)
-    # frame3.addFromList(story4, objetoCanvas)
+    frame3 = Frame(50, 320, 6.5*inch, 1.4*inch, showBoundary=1)
+    frame3.addFromList(story4, objetoCanvas)
 
     # objetoCanvas.showPage()
 
