@@ -840,7 +840,7 @@ I = \dfrac{V}{R}
 \end{frame}
 \begin{frame}
 \frametitle{Ejercicio a resolver}
-Determina la intensidad de la corriente eléctrica a través de una corriente eléctrica de \SI{50}{\ohm} al aplicarle un diferencial de potencial de \SI{100}{\volt}.
+Determina la intensidad de la corriente eléctrica a través de una resistencia eléctrica de \SI{50}{\ohm} al aplicarle un diferencial de potencial de \SI{100}{\volt}.
 \end{frame}
 \begin{frame}
 \frametitle{Ejercicio a resolver}
@@ -861,6 +861,71 @@ La expresión que se utiliza para el cálculo de la potencia es:
 P = I \, V \hspace{1cm} \left[ \unit{\watt} \quad \text{Watt} \right]
 \end{align*}
 \end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+Determina la potencia de un calefactor eléctrico cuyo voltaje es de \SI{120}{\volt} y la intensidad de la corriente eléctrica es de \SI{3}{\ampere}.
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:} \pause V =\SI{120}{\volt}, \quad I = \SI{3}{\ampere}
+\\
+\bigskip
+\pause
+\textocolor{red}{Expresión:}
+\begin{align*}
+P = I \, V
+\end{align*} 
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+P &= (\SI{120}{\volt})(\SI{3}{\ampere}) = \\[0.5em] \pause
+P &= \SI{360}{\watt}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Expresión alterna para la potencia}
+Si combinamos la ley de Ohm y la expresión para la potencia, tendremos que:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+V &= I \, R \\[0.5em] \pause
+P &= I \, V \\[0.5em] \pause
+P &= I \, (I \, R)  \pause = I^{2} \, R
+\end{aligned}
+\end{eqnarray*}
+que es una expresión alterna para la potencia.
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+Obtener la potencia eléctrica de un tostador de pan cuya resistencia es de \SI{35}{\ohm} y por ella circula una
+corriente de \SI{4}{\ampere}.
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:} \pause R =\SI{35}{\ohm}, \quad I = \SI{4}{\ampere}
+\\
+\bigskip
+\pause
+\textocolor{red}{Expresión:}
+\begin{align*}
+P = I^{2} \, R
+\end{align*} 
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\begin{eqnarray*}
+\begin{aligned}
+P &= (\SI{4}{\ampere})^{2} (\SI{35}{\ampere}) = \\[0.5em] \pause
+P &= \SI{560}{\watt} 
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
 
 \subsection{Energía eléctrica}
 
@@ -891,4 +956,80 @@ E = P \, t \hspace{1cm} \left[ \unit{\joule} \quad \text{Joule} \right]
 \frametitle{Unidad más utilizada}
 Aunque un joule es la unidad en que se mide la energía en el Sistema Internacional (SI), \pause en la práctica, para referirnos al consumo de energía en nuestro hogar o en el comercio, se utiliza la unidad llamada \textocolor{red}{kilowatt-hora} (\SI{1}{\kilo\watt\hour}).
 \end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+Resuelve lo siguiente:
+\pause
+\setbeamercolor{item projected}{bg=darkgreen,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item ¿Qué potencia desarrolla una plancha eléctrica que recibe una diferencia de potencial de \SI{120}{\volt} y por su resistencia circula una corriente de \SI{7}{\ampere}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+\setbeamercolor{item projected}{bg=darkgreen,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Calcula la energía eléctrica consumida en \unit{\kilo\watt\hour},  al estar encendida la plancha \SI{75}{\minute}.
+\item ¿Cuál es el costo del consumo de energía eléctrica de la plancha si el precio de \SI{1}{\kilo\watt\hour } lo consideramos de \$\num{2.3}?
+\end{enumerate}
+\end{frame}
+
+\subsection{Efecto Joule}
+
+\begin{frame}
+\frametitle{La experiencia diaria}
+Cuando circula corriente eléctrica en un conductor, parte de la energía cinética de los electrones se transforma en calor y eleva la temperatura de éste \pause con lo cual se origina el fenómeno que recibe el nombre de efecto Joule.
+\end{frame}
+\begin{frame}
+\frametitle{El efecto Joule}
+El \textocolor{red}{calor} que produce una \textocolor{ao}{corriente eléctrica} al circular por un conductor
+\pause es directamente proporcional al cuadrado de la intensidad de la corriente, a la \textocolor{cadmiumgreen}{resistencia} y al \textocolor{byzantine}{tiempo} que dura circulando la corriente.
+\end{frame}
+\begin{frame}
+\frametitle{Expresión para el efecto Joule}
+Matemáticamente se expresa como:
+\pause
+\begin{align*}
+Q = 0.24 \, I^{2} \,  R \, t
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+Por el embobinado de un motor eléctrico circulan \SI{3}{\ampere} al estar conectado a una diferencia de potencial de \SI{120}{\volt}.
+\\
+\bigskip
+\pause
+¿Qué calor genera en dos minutos?
+\end{frame}
+\begin{frame}
+\frametitle{Solución del ejercicio}
+\begin{align*}
+Q = \SI{10368}{\cal}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+Una plancha eléctrica tiene una resistencia de \SI{30}{\ohm} y se conecta durante 25 minutos a una diferencia de potencial de \SI{120}{\volt}.
+\\
+\bigskip
+\pause
+¿Qué cantidad de calor produce?
+\end{frame}
+\begin{frame}
+\frametitle{Solución del ejercicio}
+\begin{align*}
+Q = \SI{1.782d4}{\cal}
+\end{align*}
+\end{frame}
+
 \end{document}
